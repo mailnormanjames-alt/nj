@@ -56,7 +56,7 @@ const WORKS = [
 const ABOUT_IMAGE = {
   src: '/images/about-portrait.jpg',
   alt: 'Norman James',
-  hasImage: false, // set to true after adding about-portrait.jpg
+  hasImage:true, // set to true after adding about-portrait.jpg
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
