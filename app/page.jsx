@@ -23,7 +23,7 @@ const CATEGORIES = [
   { id: 'portrait',    label: 'Portrait',    src: '/images/cat-portrait.jpg',    hasImage: true },
   { id: 'editorial',   label: 'Editorial',   src: '/images/cat-editorial.jpg',   hasImage: true },
   { id: 'fashion',     label: 'Fashion',     src: '/images/cat-fashion.jpg',     hasImage: true },
-  { id: 'documentary', label: 'Documentary', src: '/images/cat-documentary.jpg', hasImage: false },
+  { id: 'documentary', label: 'Documentary', src: '/images/cat-documentary.jpg', hasImage: true },
 ]
 
 const WORKS = [
