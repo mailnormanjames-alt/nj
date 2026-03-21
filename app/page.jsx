@@ -311,7 +311,7 @@ export default function Home() {
         <section id="contact" className="contact">
           <div className="ct-top">
             <span className="ct-label sr">Commissions &amp; Enquiries</span>
-            <div className="ct-avail sr">Currently available<br />for new work</div>
+            <div className="ct-avail sr">Available Pan India<br />&amp; Worldwide</div>
           </div>
           <div className="ct-heading sr">
             <div className="ch-row">Let&apos;s</div>
