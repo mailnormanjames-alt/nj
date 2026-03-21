@@ -20,10 +20,10 @@ const HERO_IMAGE = {
 }
 
 const CATEGORIES = [
-  { id: 'portrait',    label: 'Portrait',    src: '/images/cat-portrait.jpg',    hasImage: false },
-  { id: 'editorial',   label: 'Editorial',   src: '/images/cat-editorial.jpg',   hasImage: false },
-  { id: 'fashion',     label: 'Fashion',     src: '/images/cat-fashion.jpg',     hasImage: false },
-  { id: 'documentary', label: 'Documentary', src: '/images/cat-documentary.jpg', hasImage: false },
+  { id: 'portrait',    label: 'Portrait',    src: '/images/cat-portrait.jpg',    hasImage: true },
+  { id: 'editorial',   label: 'Editorial',   src: '/images/cat-editorial.jpg',   hasImage: true },
+  { id: 'fashion',     label: 'Fashion',     src: '/images/cat-fashion.jpg',     hasImage: true },
+  { id: 'life style', label: 'Documentary', src: '/images/cat-documentary.jpg', hasImage: true },
 ]
 
 const WORKS = [
@@ -31,32 +31,32 @@ const WORKS = [
     num: 'No.01', cat: 'Portrait',
     title: ['Add your', 'title here'],   // line 1 plain, line 2 italic
     desc: 'Replace with your project description once you add work-01.jpg',
-    src: '/images/work-01.jpg', hasImage: false,
+    src: '/images/work-01.jpg', hasImage: true,
   },
   {
     num: 'No.02', cat: 'Editorial',
     title: ['Add your', 'title here'],
     desc: 'Replace with your project description once you add work-02.jpg',
-    src: '/images/work-02.jpg', hasImage: false,
+    src: '/images/work-02.jpg', hasImage: true,
   },
   {
     num: 'No.03', cat: 'Fashion',
     title: ['Add your', 'title here'],
     desc: 'Replace with your project description once you add work-03.jpg',
-    src: '/images/work-03.jpg', hasImage: false,
+    src: '/images/work-03.jpg', hasImage: true,
   },
   {
     num: 'No.04', cat: 'Documentary',
     title: ['Add your', 'title here'],
     desc: 'Replace with your project description once you add work-04.jpg',
-    src: '/images/work-04.jpg', hasImage: false,
+    src: '/images/work-04.jpg', hasImage: true,
   },
 ]
 
 const ABOUT_IMAGE = {
   src: '/images/about-portrait.jpg',
   alt: 'Norman James',
-  hasImage: false, // set to true after adding about-portrait.jpg
+  hasImage: true, // set to true after adding about-portrait.jpg
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
