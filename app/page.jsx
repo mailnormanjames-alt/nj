@@ -23,33 +23,39 @@ const CATEGORIES = [
   { id: 'portrait',    label: 'Portrait',    src: '/images/cat-portrait.jpg',    hasImage: true },
   { id: 'editorial',   label: 'Editorial',   src: '/images/cat-editorial.jpg',   hasImage: true },
   { id: 'fashion',     label: 'Fashion',     src: '/images/cat-fashion.jpg',     hasImage: true },
-  { id: 'life style', label: 'Documentary', src: '/images/cat-documentary.jpg', hasImage: true },
+  { id: 'lifestyle',  label: 'Lifestyle', src: '/images/cat-lifestyle.jpg',   hasImage: true },
 ]
 
 const WORKS = [
   {
     num: 'No.01', cat: 'Portrait',
-    title: ['Add your', 'title here'],   // line 1 plain, line 2 italic
-    desc: 'Replace with your project description once you add work-01.jpg',
+    title: ['Before the', 'mask returns'],
+    desc: 'A study in stillness. Shot over two days in natural light — no direction, no posing. Just presence and the moment before self-consciousness returns.',
     src: '/images/work-01.jpg', hasImage: true,
   },
   {
     num: 'No.02', cat: 'Editorial',
-    title: ['Add your', 'title here'],
-    desc: 'Replace with your project description once you add work-02.jpg',
+    title: ['What light', 'cannot hide'],
+    desc: 'A six-page editorial exploring texture, shadow, and the quiet tension between subject and space. Published in collaboration with studio Noir, London.',
     src: '/images/work-02.jpg', hasImage: true,
   },
   {
     num: 'No.03', cat: 'Fashion',
-    title: ['Add your', 'title here'],
-    desc: 'Replace with your project description once you add work-03.jpg',
+    title: ['The body', 'as language'],
+    desc: 'Movement captured mid-thought. A fashion series that refuses stillness — every frame taken between poses, in the breath between directions.',
     src: '/images/work-03.jpg', hasImage: true,
   },
   {
-    num: 'No.04', cat: 'lifestyle',
-    title: ['Add your', 'title here'],
-    desc: 'Replace with your project description once you add work-04.jpg',
+    num: 'No.04', cat: 'Lifestyle',
+    title: ['Ordinary', 'extraordinary'],
+    desc: 'Everyday moments rendered cinematic. A lifestyle series built on the belief that the most compelling images live in the unremarkable hours.',
     src: '/images/work-04.jpg', hasImage: true,
+  },
+  {
+    num: 'No.05', cat: 'Portrait',
+    title: ['She looked once,', 'never again'],
+    desc: 'A single-session portrait study. Soft light, no retouching, no second takes. The camera found what words never could.',
+    src: '/images/work-05.jpg', hasImage: true,
   },
 ]
 
@@ -112,8 +118,9 @@ export default function Home() {
                   alt={HERO_IMAGE.alt}
                   fill
                   priority
+                  quality={95}
                   className="hero-img"
-                  sizes="50vw"
+                  sizes="100vw"
                 />
               ) : (
                 <span className="hero-img-ph">Add hero.jpg</span>
@@ -185,8 +192,9 @@ export default function Home() {
                       src={cat.src}
                       alt={cat.label}
                       fill
+                      quality={90}
                       className="cat-card-img"
-                      sizes="25vw"
+                      sizes="(max-width:900px) 50vw, 25vw"
                     />
                   ) : (
                     <div className="cat-card-ph">{cat.src.split('/').pop()}</div>
@@ -222,7 +230,7 @@ export default function Home() {
               <div className="work-img-col">
                 <div className="work-img">
                   {w.hasImage ? (
-                    <Image src={w.src} alt={w.title.join(' ')} fill className="work-img-actual" sizes="(max-width:900px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
+                    <Image src={w.src} alt={w.title.join(' ')} fill quality={90} className="work-img-actual" sizes="(max-width:900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
                   ) : (
                     <div className="work-img-ph">{w.src.split('/').pop()}</div>
                   )}
@@ -280,8 +288,9 @@ export default function Home() {
                   src={ABOUT_IMAGE.src}
                   alt={ABOUT_IMAGE.alt}
                   fill
+                  quality={90}
                   className="about-img-photo"
-                  sizes="40vw"
+                  sizes="(max-width:768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                 />
               ) : (
@@ -311,6 +320,31 @@ export default function Home() {
             <div className="ch-row">Real.</div>
           </div>
           <ContactForm />
+        </section>
+
+        {/* ── INSTAGRAM STRIP ────────────────────────── */}
+        <section className="insta-section">
+          <div className="insta-header sr">
+            <h2 className="insta-title">Connect <em>With Us</em></h2>
+            <a href="https://instagram.com/normanjames" target="_blank" rel="noopener noreferrer" className="insta-handle">@normanjames</a>
+          </div>
+          <div className="insta-strip">
+            {[1,2,3,4,5,6,7,8].map((n) => (
+              <a key={n} href="https://instagram.com/normanjames" target="_blank" rel="noopener noreferrer" className="insta-item">
+                <Image
+                  src={`/images/instagram-1__${n}_.jpg`}
+                  alt={`Norman James Instagram ${n}`}
+                  fill
+                  quality={90}
+                  className="insta-img"
+                  sizes="25vw"
+                />
+                <div className="insta-overlay">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </div>
+              </a>
+            ))}
+          </div>
         </section>
 
         {/* ── FOOTER ─────────────────────────────────── */}
