@@ -46,7 +46,7 @@ const WORKS = [
     src: '/images/work-03.jpg', hasImage: true,
   },
   {
-    num: 'No.04', cat: 'Documentary',
+    num: 'No.04', cat: 'lifestyle',
     title: ['Add your', 'title here'],
     desc: 'Replace with your project description once you add work-04.jpg',
     src: '/images/work-04.jpg', hasImage: true,
